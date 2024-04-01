@@ -1,16 +1,26 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-latest-posts {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+ul.wp-block-create-block-latest-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+ul.wp-block-create-block-latest-posts li img {
+  max-width: 350px;
+  max-height: 350px;
+  margin-bottom: 10px;
+}
+ul.wp-block-create-block-latest-posts li h4 {
+  font-size: 20px;
+  margin: 0 0 5px;
+  line-height: 1.4;
+}
+ul.wp-block-create-block-latest-posts li h4 a {
+  color: #000;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
