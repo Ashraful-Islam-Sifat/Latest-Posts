@@ -22,5 +22,15 @@ ul.wp-block-create-block-latest-posts li h4 {
 ul.wp-block-create-block-latest-posts li h4 a {
   color: #000;
 }
+ul.wp-block-create-block-latest-posts li time {
+  font-size: 12px;
+  color: #969696;
+}
+ul.wp-block-create-block-latest-posts li p {
+  font-size: 14px;
+  color: #303030;
+  line-height: 1.6;
+  margin: 15px 0 0;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

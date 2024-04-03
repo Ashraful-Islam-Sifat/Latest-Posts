@@ -17,14 +17,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
  function create_block_render_latest_posts($attributes) {
 	$args = array(
-		'post_per_page' => $attributes['numberOfPosts'],
-		'post_status' => 'publish'
+		'posts_per_page' => $attributes['numberOfPosts'],
+		'post_status' => 'publish',
+		'order' => $attributes['order'],
+		'orderBy' => $attributes['orderBy']
 	);
+	if(isset($attributes['categories'])){
+		$args['category__in'] = array_column($attributes['categories'], 'id');
+	}
 	$rescent_posts = get_posts( $args );
 	
 	$posts = '<ul '. get_block_wrapper_attributes() .'>';
 	foreach($rescent_posts as $post) {
-		$title = get_the_title( $post ) ? get_the_title( $post ) : __('(No title)', 'latest-posts') ;
+		$title = get_the_title( $post );
+		$title = $title ? $title : __('(No title)', 'latest-posts') ;
 		$permalink = get_permalink( $post );
 		$excerpt = get_the_excerpt( $post );
 
